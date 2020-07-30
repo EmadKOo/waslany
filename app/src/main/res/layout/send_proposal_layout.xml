@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/hassan">
+
+    <EditText
+        android:id="@+id/roomTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Room Title"
+        android:textColorHint="@color/WhiteSmoke"
+        android:background="@null"
+        android:layout_margin="10dp"
+        />
+    <EditText
+        android:id="@+id/proposalOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/roomTitle"
+        android:hint="      Type Simple Overview about yourself."
+        android:background="@drawable/round_edit_text"
+        android:lines="5"
+        android:textColorHint="@color/DarkGray"/>
+
+    <com.wasalny.Fonts.EnglishLightButton
+        android:id="@+id/sendProposalOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/hassan"
+        android:background="@drawable/round_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/proposalOverview"
+        android:layout_margin="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        />
+</RelativeLayout>

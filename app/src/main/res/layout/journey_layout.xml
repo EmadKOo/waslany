@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/round_edit_text">
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/descriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/fromTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionTV"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="From"
+        android:textColor="@color/black" />
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/toTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fromTV"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="To"
+        android:textColor="@color/black" />
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/expectedBudgetTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toTV"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Expected Budget"
+        android:textColor="@color/black" />
+
+    <com.wasalny.Fonts.Comforta
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="more details   "
+        android:textSize="12sp"
+        android:layout_below="@id/expectedBudgetTV"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

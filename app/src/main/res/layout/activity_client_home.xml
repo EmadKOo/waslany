@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Client.HomeClientActivity"
+    android:background="@color/hassan">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/round_login"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/clientHomeToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/seeMsgsClient"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/send"
+                    android:layout_alignParentLeft="true"
+                    />
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wasalny"
+                    android:layout_centerInParent="true"
+                    android:textSize="19sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/logoutClient"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/logout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/haze"
+            android:layout_below="@+id/clientHomeToolbar"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"/>
+
+        <com.wasalny.Fonts.Comforta
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_below="@id/profileImage"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/firstLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentTop="true"
+          >
+            <Button
+                android:id="@+id/btnAddJourney"
+                android:layout_margin="40dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:background="@drawable/section11"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Add New Journey"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"/>
+
+            <Button
+                android:id="@+id/btnPreviousJournies"
+                android:layout_margin="40dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:background="@drawable/section12"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Previous Journies"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/firstLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_margin="40dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:background="@drawable/section21"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="Profile"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp" />
+
+            <Button
+                android:id="@+id/btnAbout"
+                android:layout_margin="40dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:background="@drawable/section22"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:text="About Us"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

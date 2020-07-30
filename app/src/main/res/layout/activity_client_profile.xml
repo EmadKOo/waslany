@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amber"
+    tools:context=".Activities.Client.ClientProfileActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:background="@drawable/round_login"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileClientImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerInParent="true"/>
+
+                <EditText
+                    android:id="@+id/clientName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/profileClientImage"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="17sp"
+                    android:padding="20dp"/>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/mailClient"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_person"
+                android:drawableLeft="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/headerLayout"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/phoneClient"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/ic_local_phone_black_24dp"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Phone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/mailClient"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/cityClient"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/ic_home_black_24dp"
+                android:drawableLeft="@drawable/ic_home_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="City"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/phoneClient"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white2"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/saveProfileClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cityClient"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_register"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/profileImageProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+</RelativeLayout>

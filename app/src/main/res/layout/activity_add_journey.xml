@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppLight"
+    tools:context=".Activities.Client.AddJourneyActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addJourneyToolbar"
+        android:layout_width="match_parent"
+        android:background="@color/hassan"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.wasalny.Fonts.EnglishLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add new Journey"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/addJourneyToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/fromET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="From"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/toET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="To"
+                android:layout_below="@id/fromET"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Description"
+                android:inputType="text"
+                android:layout_below="@id/toET"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/numOfPersons"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Number of Passengers"
+                android:inputType="number"
+                android:layout_below="@id/descriptionET"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:id="@+id/journeyTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/numOfPersons">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journey Time"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/immediately"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Immediately"
+                        android:checked="true"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"/>
+
+                    <RadioButton
+                        android:id="@+id/later"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="later"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <CheckBox
+                android:id="@+id/returnOrNot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Going and Coming back"
+                android:layout_below="@id/journeyTime"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingStart="10dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:paddingEnd="10dp" />
+
+            <LinearLayout
+                android:id="@+id/carType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/returnOrNot">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car Type"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/airCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Air Conditioner"
+                        android:checked="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textSize="17sp"/>
+
+                    <RadioButton
+                        android:id="@+id/notAdapted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Not adapted"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/anyConditions"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Write any Conditions"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:layout_below="@id/carType"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/expectedBudget"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_edit"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Expected Budget"
+                android:inputType="number"
+                android:layout_below="@id/anyConditions"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/editTEXT"
+                android:textColorHint="@color/DarkGray"
+                android:textSize="15sp" />
+
+
+            <com.wasalny.Fonts.EnglishLightButton
+                android:id="@+id/btnAddJourney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Add"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:textColor="@color/amber"
+                android:layout_below="@+id/expectedBudget"
+                android:background="@drawable/round_edit" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

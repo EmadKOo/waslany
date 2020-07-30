@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Activities.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/haze"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/loginProgress"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivLogLogo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="55dp"
+                android:src="@drawable/pix" />
+
+
+            <ImageView
+                android:id="@+id/ivSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="Sign in text on registration activity"
+                android:visibility="gone"
+                />
+
+
+            <EditText
+                android:id="@+id/mailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_person"
+                android:drawableLeft="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white2"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/passwordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableStart="@drawable/icon_password"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white2"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/mGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rePasswordReg"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="#fff"
+                    android:textSize="20sp"/>
+
+                <Spinner
+                    android:id="@+id/spinnerTypeLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="#fff" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="8dp"
+                android:text="Forgot password?"
+                android:textColor="#fff"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="SignIn"
+                android:text="Sign in"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:background="@drawable/btn_login"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Don`t have Account? Sign up"
+                android:textColor="#fff" />
+
+
+            <Button
+                android:id="@+id/btnRegisterLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="#00FFFFFF"
+                android:onClick="SignUp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="REGISTER"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+       </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

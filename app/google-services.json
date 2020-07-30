@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "225616999398",
+    "firebase_url": "https://wasalny-bec26.firebaseio.com",
+    "project_id": "wasalny-bec26",
+    "storage_bucket": "wasalny-bec26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225616999398:android:0002f91e5ebc3892d1dc27",
+        "android_client_info": {
+          "package_name": "com.wasalny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225616999398-0dncg76mtnmuduhv8ih4m5akmkimcehj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wasalny",
+            "certificate_hash": "f020884615fb43abd34e6a68471e0bdf59f5a45d"
+          }
+        },
+        {
+          "client_id": "225616999398-ij4or952d112qg7176qn8bf4a19hr166.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCciuym8gPxVGRiaN994amPCs1Hf9RikK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225616999398-ij4or952d112qg7176qn8bf4a19hr166.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

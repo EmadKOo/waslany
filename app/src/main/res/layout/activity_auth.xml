@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AuthActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/haze"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:onClick="login"
+            android:textColor="#fff"
+            android:background="@drawable/btn_login"
+            android:layout_above="@+id/register"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:onClick="register"
+            android:background="@drawable/btn_register"
+            android:textColor="#fff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Driver.DisplayJourneyActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/displayJourneyToolbar"
+        android:layout_width="match_parent"
+        android:background="@color/hassan"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/backDisplayJ"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"/>
+
+            <com.wasalny.Fonts.EnglishLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wasalny"
+                android:layout_centerInParent="true"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/displayDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/displayJourneyToolbar"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/fromDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/displayDescription"/>
+
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/toDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/fromDisplay"/>
+
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/numberOfPassengersDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="number"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/toDisplay"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/journeyTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="journey Time"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:layout_below="@id/numberOfPassengersDisplay"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/backOrNot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back or not"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/journeyTimeDisplay"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/carTypeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="car type"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/backOrNot"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/moreConditionsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="moreConditionsDisplay"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:layout_below="@id/carTypeDisplay"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/expectedBudgetDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="expected budget"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/moreConditionsDisplay"/>
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/journeyStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_below="@id/expectedBudgetDisplay"
+        android:paddingBottom="20dp"/>
+
+
+    <com.wasalny.Fonts.EnglishLightButton
+        android:id="@+id/sendPropsalBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Proposal"
+        android:textColor="@color/white"
+        android:background="@drawable/round_edit_text2"
+        android:layout_below="@+id/journeyStatus"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
