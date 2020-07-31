@@ -1,5 +1,6 @@
 package com.wasalny.Activities;
 
+import android.app.AlertDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,9 +8,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.wasalny.Activities.Client.HomeClientActivity;
 import com.wasalny.Adapters.ChatAdapter;
 import com.wasalny.Model.Chat;
 import com.wasalny.Model.Room;
@@ -192,6 +196,7 @@ public class ChatActivity extends AppCompatActivity {
                 /**
                  * journey finished delete it from current
                  * and from offers and add it to previous
+                 * then appears rate file
                  */
                 mReference.child("currentJourneys")
                         .child(currentRoom.getDriverID())
@@ -221,12 +226,40 @@ public class ChatActivity extends AppCompatActivity {
                             }
                         });
 
-               Toast.makeText(ChatActivity.this, "Ask for rate", Toast.LENGTH_SHORT).show();
+showRate();
+           //    Toast.makeText(ChatActivity.this, "Ask for rate", Toast.LENGTH_SHORT).show();
                item.setVisible(false);
             }
         }else if (item.getItemId() == R.id.journeyInfo){
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void showRate(){
+        LayoutInflater li = LayoutInflater.from(getApplicationContext());
+        final View view = li.inflate(R.layout.rate, null);
+
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                ChatActivity.this);
+
+        alertDialogBuilder.setView(view);
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+        TextView okRate = view.findViewById(R.id.okRate);
+        okRate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+//        Button btnOK = view.findViewById(R.id.btnOK);
+//        btnOK.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                alertDialog.dismiss();
+//            }
+//        });
+        alertDialog.show();
     }
 }

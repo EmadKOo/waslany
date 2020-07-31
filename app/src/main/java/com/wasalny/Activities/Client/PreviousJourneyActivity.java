@@ -93,6 +93,7 @@ public class PreviousJourneyActivity extends AppCompatActivity {
                             for (DataSnapshot sSnapshot: snapshot.getChildren()) {
                                 Log.d(TAG, "onDataChange: " + sSnapshot.getValue());
                                 journey = sSnapshot.getValue(Journey.class);
+                                journey.setJourneyStatus("Finished");
                                 allJourneysList.add(journey);
                             }
                         }

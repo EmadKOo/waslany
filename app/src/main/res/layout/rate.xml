@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="10dp">
+
+    <com.wasalny.Fonts.Comforta
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Please we need rate from you this will help us ."/>
+    <RatingBar
+        android:id="@+id/rateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:numStars="5"
+        android:rating="1"
+        android:stepSize="0.1"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:isIndicator="false" />
+
+    <TextView
+        android:id="@+id/okRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_below="@id/rateBar"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/hassan"
+        android:textSize="19sp"
+        />
+</RelativeLayout>
